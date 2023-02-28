@@ -41,7 +41,7 @@ function HomePage () {
                         <div className="relative w-[80%] max-w-[500px] text-xl font-bold
                         hover:opacity-70 hover:cursor-pointer [&>div]:hover:opacity-100 select-none
                         ">
-                            <a target="_blank" href="https://rainbowdarkness-client.vercel.app/"><img className="" src={RainbowDarkness} alt="Rainbow Darkness.png" /></a>
+                            <a target="_blank" href="https://rainbowdarkness.com/"><img className="" src={RainbowDarkness} alt="Rainbow Darkness.png" /></a>
                             <div className="
                             absolute top-[50%] -translate-y-1/2 right-[50%] translate-x-1/2 opacity-0 
                             
@@ -64,15 +64,15 @@ function HomePage () {
                         <div className="relative w-[80%] max-w-[500px] text-xl font-bold
                         hover:opacity-70 hover:cursor-pointer [&>div]:hover:opacity-100 select-none
                         ">
-                            <a target="_blank" href="https://rainbowdarkness-client.vercel.app/"><img className="" src={CloudStock} alt="Rainbow Darkness.png" /></a>
+                            <a target="_blank" href="https://stockshapes-client.vercel.app/"><img className="" src={CloudStock} alt="Rainbow Darkness.png" /></a>
                             <div className="
                             absolute top-[50%] -translate-y-1/2 right-[50%] translate-x-1/2 opacity-0 
                             
                             ">
                                 Go to live site!</div>
                         </div>
-                        <div className="italic font-semibold">CloudStock</div>
-                        <div className="font-semibold">React | Express | Node | MongoDB | Vercel</div>
+                        <div className="italic font-semibold">Stock Shapes</div>
+                        <div className="font-semibold">React | Express | Node | Vercel | EC2</div>
                         <div className="">Real-time stock & future updates with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div>
                         <div className={boolState ? "text-yellow-400 select-none hover:text-slate-800 hover:cursor-pointer" :
                         "text-slate-400 select-none hover:text-slate-800 hover:cursor-pointer"}
@@ -89,7 +89,7 @@ function HomePage () {
                 <div className="pt-10 mb-24">
     <div className="text-center">______________________________________________________</div>
     <div className="font-bold">Education</div>
-    <div>B.A. Psychology 2018-2020</div>
+    <div>B.A. Psychology 2018-2021</div>
 
     <div className="pt-4 font-bold">Hobbies</div>
     <div>Oil Painting</div>
