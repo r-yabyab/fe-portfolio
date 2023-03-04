@@ -1,16 +1,32 @@
 import React, { useState } from "react";
 
 import RainbowDarkness from '../photos/3bf40ef49cba4e57b04b9319472d3d32.png'
-import TestPFP from '../photos/aboutmecropped111.png'
 import Linkedin from '../photos/linked.jpg'
 import CloudStock from '../photos/0adfa6c3203466b17c21befa04d7a3ee.png'
 import Clay from '../photos/IMG_7622.jpg'
+
+// hobbies
+import claygif from '../photos/claycat.gif'
+import TestPFP from '../photos/aboutmecropped111.png'
+import gallery1 from '../photos/gallery1.jpg'
+import gallery2 from '../photos/gallery2.jpg'
+
 
 import vercel from '../photos/vercel-logo.png'
 import ec2 from '../photos/ec2-logo.png'
 import nodejs from '../photos/nodejs.png'
 import html5 from '../photos/html-logo.png'
 import css3 from '../photos/css-logo.png'
+
+// website pictures
+import stockshapes from '../photos/stockshapes.png'
+import rainbowFront from '../photos/rainbow-darkness-front.png'
+import rainbowBack from '../photos/rainbow-darkness-back.png'
+
+// logos
+import rainbowLogo from '../photos/logo-r.ico'
+import rainbowEye from '../photos/logo512.png'
+import stockshapesLogo from '../photos/ss-logo512.png'
 
 function HomePage () {
 
@@ -32,15 +48,15 @@ function HomePage () {
 
                 <div className="
                 text-center pt-10 ml-10 mr-10
-                lg:flex
+                lg:fle
                 ">
                     <img draggable="false" className=" select-none w-[200px] h-[200px] object-cover rounded-full m-auto mb-10 " src={Linkedin} alt="me" />
                     {/* <div className="text-xl font-bold">About Me</div> */}
                     <div><div className="text-xl font-bold">Hello! I'm Roderick Cayabyab,</div>
                         <div className=" max-w-[600px] text-center m-auto pt-8">I'm an independent web developer from Hayward, California
                             who's fascinated in creating practical webapps for everyday use. As someone who experiences
-                            the pain of having to register everytime to use websites, I find enjoyment in creating websites with minimal overhead for users.
-                            <br /><br />Don't believe me? Check out my projects!!!!!
+                            the pain of having to register everytime to use websites, I find enjoyment in creating simple front-end applications with minimal overhead for users.
+                            <br /><br />Please see my projects!
                             {/* <br/><br/>Having a background in psychology, I was interested in ways I can incorporate
                         mental health to simple webpages that is accessible to everyone. I found it unfair that mental
                         health apps today, and tracking apps in general, requires overhead such as registering with emails
@@ -65,7 +81,8 @@ function HomePage () {
                         hover:opacity-70 hover:cursor-pointer [&>div]:hover:opacity-100 select-none
                         ">
                                 <a target="_blank" rel="noreferrer" href="https://rainbowdarkness.com/">
-                                    <img className=" aspect-square object-cover" src={RainbowDarkness} alt="Rainbow Darkness.png" /></a>
+                                    {/* <img className=" aspect-square object-cover" src={RainbowDarkness} alt="Rainbow Darkness.png" /></a> */}
+                                    <img className=" aspect-square object-cover" src={rainbowFront} alt="Rainbow Darkness.png" /></a>
                                 <div className="
                             absolute top-[50%] -translate-y-1/2 right-[50%] translate-x-1/2 opacity-0 
                              pointer-events-none
@@ -73,8 +90,11 @@ function HomePage () {
                             ">
                                     Go to live site!</div>
                             </div>
-                            <div className=" pt-8 text-xl font-bold text-center pb-4">Rainbow Darkness</div>
-                            <div className="font-semibold">React | Express | Node | MongoDB | Vercel</div>
+                            <div className=" pt-8 text-xl font-bold text-center pb-4 flex gap-x-3 justify-center">
+                                <img src={rainbowLogo} width="26" alt="Rainbow Darkness Logo" />
+                                <div>Rainbow Darkness</div>
+                                </div>
+                            <div className="font-semibold">React | Express | NodeJS | MongoDB | Vercel</div>
                             <div className="">Happiness tracking application. Users can compare their scores with the entire userbase. </div>
                             <div className={boolState ? "text-yellow-400 select-none hover:text-slate-800 hover:cursor-pointer" :
                                 "text-slate-400 select-none hover:text-slate-800 hover:cursor-pointer"}
@@ -90,15 +110,19 @@ function HomePage () {
                         hover:opacity-40  hover:cursor-pointer [&>div]:hover:opacity-100 select-none
                         ">
                                 <a target="_blank" rel="noreferrer" href="https://stockshapes-client.vercel.app/">
-                                    <img className=" aspect-square object-cover" src={CloudStock} alt="Rainbow Darkness.png" /></a>
+                                    {/* <img className=" aspect-square object-cover" src={CloudStock} alt="Rainbow Darkness.png" /></a> */}
+                                    <img className=" aspect-square object-cover" src={stockshapes} alt="Rainbow Darkness.png" /></a>
                                 <div className="
                             absolute top-[50%] -translate-y-1/2 right-[50%] translate-x-1/2 opacity-0 
                              pointer-events-none
                             ">
                                     Go to live site!</div>
                             </div>
-                            <div className=" pt-8 text-xl text-center pb-4 font-bold">Stock Shapes</div>
-                            <div className="font-semibold">React | Express | Node | Vercel | EC2</div>
+                            <div className=" pt-8 text-xl text-center pb-4 font-bold flex gap-x-3 justify-center">
+                            <img src={stockshapesLogo} width="26" alt="Stock Shapes Logo" />
+                                <div>Stock Shapes</div>
+                                </div>
+                            <div className="font-semibold">React | Express | NodeJS | Vercel | EC2</div>
                             {/* <div className="">Real-time stock & future updates with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
                             <div className="">Real-time stock prices with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div>
                             <div className={boolState ? "text-yellow-400 select-none hover:text-slate-800 hover:cursor-pointer" :
@@ -189,14 +213,27 @@ function HomePage () {
                     </div>
 
                     <div className="pt-20 pb-8 text-xl font-bold text-center">Hobbies</div>
-                    <div className="flex space-x-10 justify-center">
+                    <div className="
+                    flex space-x-10 justify-evenly 
+                    [&>div>p]:pb-8 [&>div>p]:text-center
+                        [&>div>div>img]:object-cover [&>div>div>img]:select-none
+                        max-lg:[&>div>div>img]:w-[200px] max-lg:[&>div>div>img]:h-[200px]
+                            lg:[&>div>div>img]:w-[400px] lg:[&>div>div>img]:h-[400px]
+                        ">
                         <div>
-                            <div>Roaming modern art galleries</div>
-                            <img draggable='false' className="w-[200px] h-[200px] object-cover select-none" src={TestPFP} alt="cat" />
+                            <p>Roaming modern art galleries</p>
+                            <div>
+                                {/* <img draggable='false' className="" src={TestPFP} alt="cat" /> */}
+                                <img draggable='false' className="" src={gallery2} alt="cat" />
+                                <img draggable='false' className="" src={gallery1} alt="cat" />
+                            </div>
                         </div>
                         <div>
-                            <div>Playing with my cat</div>
-                            <img draggable='false' className="w-[200px] h-[200px] object-cover select-none" src={Clay} alt="cat" />
+                            <p>Playing with my cat</p>
+                            <div>
+                                <img draggable='false' className="" src={Clay} alt="cat" />
+                                <img draggable='false' className="" src={claygif} alt="cat" />
+                            </div>
                         </div>
                     </div>
                 </div>
