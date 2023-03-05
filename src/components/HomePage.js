@@ -27,6 +27,7 @@ import rainbowBack from '../photos/rainbow-darkness-back.png'
 import rainbowLogo from '../photos/logo-r.ico'
 import rainbowEye from '../photos/logo512.png'
 import stockshapesLogo from '../photos/ss-logo512.png'
+import BottomHeader from "./BottomHeader";
 
 function HomePage () {
 
@@ -47,12 +48,13 @@ function HomePage () {
                 {/* <div className="relative m-auto max-w-[1400px]  "> */}
 
                 <div className="
-                text-center pt-10 ml-10 mr-10
+                text-center pt-16 ml-10 mr-10
                 lg:fle
                 ">
-                    <img draggable="false" className=" select-none w-[200px] h-[200px] object-cover rounded-full m-auto mb-10 " src={Linkedin} alt="me" />
+                    <img draggable="false" className=" mb-10 select-none w-[200px] h-[200px] object-cover rounded-full m-auto " src={Linkedin} alt="me" />
                     {/* <div className="text-xl font-bold">About Me</div> */}
-                    <div><div className="text-xl font-bold">Hello! I'm Roderick Cayabyab,</div>
+                    <div className="">
+                        <div className="text-xl font-bold">Hello! I'm Roderick Cayabyab,</div>
                         <div className=" max-w-[600px] text-center m-auto pt-8">I'm an independent web developer from Hayward, California
                             who's fascinated in creating practical webapps for everyday use. As someone who experiences
                             the pain of having to register everytime to use websites, I find enjoyment in creating simple front-end applications with minimal overhead for users.
@@ -68,7 +70,7 @@ function HomePage () {
 
                 <div className="relative bg-neutral-200 bg-contain mt-20">
 
-                    <div className="text-center text-xl bg-neutral-200 pt-8 pb-8 font-bold">Projects</div>
+                    <div className="text-center text-xl bg-neutral-200 pt-10 pb-8 font-bold">Projects</div>
 
                     {/* RainbowDarkness */}
                     <div className="
@@ -130,7 +132,7 @@ function HomePage () {
                                 onClick={boolHandler}
                             >Details</div>
                             <div onClick={boolHandler} className={boolState ? "bg-slate-200 hover:cursor-pointer" : "hidden"}>
-                                Pulls data IEX Cloud API, uses server-sent-events (SSE) to feed live price updates to clients. Serverside deployed to EC2 as a way to accomodate live events that serverless computing cannot support natively. $50 a month for my API costs, one session from market open to close tends to run around $1-4 per user that displays 5 stocks. Currently working on optimizing API calls to minimize API costs.
+                                Pulls data from IEX Cloud API, uses server-sent-events (SSE) to feed live price updates to clients. Serverside deployed to EC2 as a way to accomodate live events that serverless computing cannot support natively. $50 a month for my API costs, one session from market open to close tends to run around $1-4 per user that displays 5 stocks. Currently working on optimizing API calls to minimize API costs.
                             </div>
                         </div>
                     </div>
@@ -163,7 +165,7 @@ function HomePage () {
                                 <img width="64" alt="React-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/64px-React-icon.svg.png"></img>
                             </div>
                             <div>
-                                <p>Javascript</p>
+                                <p>JavaScript</p>
                                 <img width="64" alt="JavaScript-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/64px-JavaScript-logo.png" />
                             </div>
                             <div>
@@ -225,7 +227,7 @@ function HomePage () {
                             <div>
                                 {/* <img draggable='false' className="" src={TestPFP} alt="cat" /> */}
                                 <img draggable='false' className="" src={gallery2} alt="cat" />
-                                <img draggable='false' className="" src={gallery1} alt="cat" />
+                                {/* <img draggable='false' className="" src={gallery1} alt="cat" /> */}
                             </div>
                         </div>
                         <div>
@@ -239,6 +241,8 @@ function HomePage () {
                 </div>
 
             </div>
+
+            <BottomHeader />
 
         </>
     )
