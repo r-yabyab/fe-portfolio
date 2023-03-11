@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.imgopacity:hover [&>div>img] {
+  opacity: 0.4;
+}

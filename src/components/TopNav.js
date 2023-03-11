@@ -20,7 +20,7 @@ function TopNav () {
             </div> */}
 
             <div className="relative bg-neutral-200 text-black pt-3 pb-12 text-2xl">
-                <div className="ml-8 absolute"><span className="font-bold">Roderick Cayabyab</span> <span className="max-lg:hidden">| Web Developer</span></div>
+                <div className="ml-8 absolute"><span className="font-bold">Roderick Cayabyab</span> <span className="max-md:hidden">| Web Developer</span></div>
                 {/* <div className="absolute font-bold left-[50%] -translate-x-1/2">Web Developer</div> */}
                 <div className="absolute mr-8 right-0 ">
                     <div className="max-lg:hidden flex gap-8 text-md ">
