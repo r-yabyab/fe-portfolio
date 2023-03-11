@@ -40,6 +40,7 @@ function HomePage () {
     const [boolState, setBoolState] = useState(false)
             // For hovering over to display extra info
     // const [mouseClass, setMouseClass] = useState(false)
+    const [gifToggle, setGifToggle] = useState(true)
 
     const [imgHover, setImgHover] = useState(false)
 
@@ -88,7 +89,14 @@ function HomePage () {
 
                 <div className="relative bg-neutral-200 bg-contain mt-20">
 
-                    <div className="text-center text-xl bg-neutral-200 pt-10 pb-8 font-bold">Projects</div>
+                    <div className="text-center flex flex-col justify-center items-center gap-4 text-xl bg-neutral-200 pt-10 pb-8 font-bold">
+                        <div>Projects</div>
+                        <div
+                            onClick={e => setGifToggle(!gifToggle)} 
+                            className={`${gifToggle ? " text-green-400  " : "text-red-400" } hover:cursor-pointer select-none  text-sm`}>
+                        [Gifs on]
+                        </div>
+                        </div>
 
                     {/* RainbowDarkness */}
                     <div className="
@@ -101,19 +109,62 @@ function HomePage () {
                                 // onMouseOver={imgMouseOver}
                                 // onMouseLeave={imgMouseLeave} 
                                 className="relative w-[80%] max-w-[500px] text-xl font-bold
-                                hover:opacity-70 hover:border-4 hover:border-black  hover:cursor-pointer [&>div]:hover:opacity-100 select-none
+                                 hover:cursor-pointer [&>div]:hover:opacity-100 select-none
+                                group
                                 ">
-                                <a target="_blank" rel="noreferrer" href="https://rainbowdarkness.com/">
-                                    {/* <img className=" aspect-square object-cover" src={RainbowDarkness} alt="Rainbow Darkness.png" /></a> */}
-                                    {/* <img className=" aspect-square object-cover" src={ imgHover ? rCover : rGif1} alt="Rainbow Darkness.png" /></a> */}
-                                    <img className=" aspect-square object-cover" src={rGif1} alt="Rainbow Darkness.png" />
+
+                                <div className="absolute  
+                                    opacity-0 group-hover:opacity-100
+                                    group-hover:bg-slate-200 group-hover:bg-opacity-60  hover:bg-opacity-90  h-full w-[50%]  left-0">
+                                    <a target="_blank" rel="noreferrer" href="https://rainbowdarkness.com/">
+                                        <div className="hover:bg-black  hover:text-white w-full h-full  ">
+
+                                            <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
+                                                <div>Live Site</div>
+                                                <div><img className="w-[60px] bg-white " src={rainbowLogo} alt="stockshapes logo" /></div>
+                                            </div>
+
+                                        </div>
                                     </a>
-                                <div className="
-                                    absolute top-[50%] -translate-y-1/2 right-[50%] translate-x-1/2 opacity-0 
-                                    pointer-events-none
-                             
-                                    ">
-                                    Go to live site!</div>
+                                </div>
+                                <div className="absolute 
+                                    opacity-0 group-hover:opacity-100
+                                    group-hover:bg-slate-200 group-hover:bg-opacity-60 h-full w-[50%] right-0">
+                                    <div className="absolute w-full h-[50%] hover:bg-black hover:text-white top-0">
+                                        <div className="absolute gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
+                                            <div>
+                                                Client-side
+                                            </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" viewBox="0 0 16 16">
+                                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a target="_blank" rel="noreferrer" href="https://github.com/r-yabyab/rainbowdarkness-server">
+                                        <div className="absolute h-[50%] w-full hover:bg-black hover:text-white bottom-0">
+                                            <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
+                                                <div>
+                                                    Server-side
+                                                </div>
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" viewBox="0 0 16 16">
+                                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+
+
+                                {/* <img className=" aspect-square object-cover" src={RainbowDarkness} alt="Rainbow Darkness.png" /></a> */}
+                                {/* <img className=" aspect-square object-cover" src={ imgHover ? rCover : rGif1} alt="Rainbow Darkness.png" /></a> */}
+                                <img className=" aspect-square h-[400px] object-cover" src={gifToggle ? rGif1 : rCover} alt="Rainbow Darkness.png" />
+
+
                             </div>
                             <div className=" pt-8 text-xl font-bold text-center pb-4 flex gap-x-3 justify-center">
                                 <img src={rainbowLogo} width="26" alt="Rainbow Darkness Logo" />
@@ -133,8 +184,8 @@ function HomePage () {
                         {/* Stock Shapes */}
                         <div className="relative text-left [&>div]:max-w-[500px]">
                             <div
-                                onMouseOver={imgMouseOver}
-                                onMouseLeave={imgMouseLeave}
+                                // onMouseOver={imgMouseOver}
+                                // onMouseLeave={imgMouseLeave}
                                 className="relative w-[80%] max-w-[500px] text-xl font-bold
                                       hover:cursor-pointer  select-none
                                       group
@@ -143,12 +194,16 @@ function HomePage () {
                                 <div className="absolute  
                                     opacity-0 group-hover:opacity-100
                                     group-hover:bg-slate-200 group-hover:bg-opacity-60  hover:bg-opacity-90  h-full w-[50%]  left-0">
+                                    <a target="_blank" rel="noreferrer" href="https://stockshapes-client.vercel.app/">
                                     <div className="hover:bg-black hover:text-white w-full h-full  ">
-                                    <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
-                                        <div>Live Site</div>
-                                        <div><img className="w-[60px]" src={stockshapesLogo} alt="stockshapes logo" /></div>
+                                    
+                                        <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
+                                            <div>Live Site</div>
+                                            <div><img className="w-[60px]" src={stockshapesLogo} alt="stockshapes logo" /></div>
+                                        </div>
+                                        
                                     </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div className="absolute 
                                     opacity-0 group-hover:opacity-100
@@ -165,6 +220,7 @@ function HomePage () {
                                             </div>
                                         </div>
                                     </div>
+                                    <a target="_blank" rel="noreferrer" href="https://github.com/r-yabyab/cloudstock-server">
                                     <div className="absolute h-[50%] w-full hover:bg-black hover:text-white bottom-0">
                                         <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
                                             <div>
@@ -177,6 +233,7 @@ function HomePage () {
                                             </div>
                                         </div>
                                     </div>
+                                    </a>
 
                                 </div>
                                 {/* <a target="_blank" rel="noreferrer" href="https://stockshapes-client.vercel.app/"> */}
@@ -185,10 +242,12 @@ function HomePage () {
                                 { }
                                 {/* vvv This doesn't work for some reason, it turns all the elements above as opacity-20 */}
                                 {/* <div className={`${imgHover ? "opacity-20" :null } h-[400px] flex flex-col gap-8 items-center justify-center bg-white`}> */}
-                                <div className='h-[400px] flex flex-col gap-8 items-center justify-center bg-white'>
+                                <div className={gifToggle ? 'h-[400px] flex flex-col gap-8 items-center justify-center bg-white' : 'hidden'}>
                                     <img className="  object-cover" src={ssSlow} alt="stockshapes gif 1" />
                                     <img className="  object-cover" src={ssFast} alt="stockshapes gif 2" />
                                 </div>
+                                <img className={gifToggle ? 'hidden' : "aspect-square h-[400px] object-cover"} src={stockshapes} alt="Rainbow Darkness.png" />
+
                                 {/* </a> */}
                                 <div className="
                                         absolute top-[50%] -translate-y-1/2 right-[50%] translate-x-1/2 opacity-0 
@@ -276,18 +335,14 @@ function HomePage () {
                                 <p>Amazon EC2</p>
                                 <img width="64" src={ec2} alt="Amazon EC2 Logo" />
                             </div>
-    </div>
-</div>
+                        </div>
+                    </div>
 
                 </div>
 
 
 
-                <div 
-                className="pt-20 mb-48"
-                
-                >
-                    {/* <div className="text-center">______________________________________________________</div> */}
+                <div className="pt-20 mt-20 pb-48 flex justify-evenly bg-neutral-200">
                     <div className=" bg-neutral-200">
                         <div className="font-bold text-xl text-center pb-8">Education</div>
                         <div className="flex gap-4 items-center">
@@ -296,16 +351,18 @@ function HomePage () {
                         </div>
                     </div>
 
-                    <div className="pt-20 pb-8 text-xl font-bold text-center">Hobbies</div>
+                    {/* <div className="pt-20 pb-8 text-xl font-bold text-center">Hobbies</div> */}
                     <div className="
-                    flex space-x-10 justify-evenly 
+                    flex space-x-10 justify-evenly flex-col
                     [&>div>p]:pb-8 [&>div>p]:text-center
                         [&>div>div>img]:object-cover [&>div>div>img]:select-none
                         max-lg:[&>div>div>img]:w-[200px] max-lg:[&>div>div>img]:h-[200px]
                             lg:[&>div>div>img]:w-[400px] lg:[&>div>div>img]:h-[400px]
                         ">
+                    <div className="pb-8 text-xl font-bold text-center">Hobbies</div>
+
                         <div>
-                            <p>Roaming modern art galleries</p>
+                            <p>Playing with my cat & roaming modern art galleries</p>
                             <div>
                                 {/* <img draggable='false' className="" src={TestPFP} alt="cat" /> */}
                                 <img draggable='false' className="" src={gallery2} alt="cat" />
@@ -313,7 +370,6 @@ function HomePage () {
                             </div>
                         </div>
                         <div>
-                            <p>Playing with my cat</p>
                             <div>
                                 <img draggable='false' className="" src={Clay} alt="cat" />
                                 <img draggable='false' className="" src={claygif} alt="cat" />
