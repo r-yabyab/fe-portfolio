@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BottomHeader from "./BottomHeader";
 
 // import RainbowDarkness from '../photos/3bf40ef49cba4e57b04b9319472d3d32.png'
@@ -49,6 +49,16 @@ function HomePage ({ projectsRef }) {
         console.log(boolState)
     }
 
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const images = [Clay, gallery2, claygif];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+          setCurrentImageIndex((currentImageIndex) => (currentImageIndex + 1) % images.length);
+        }, 3000);
+        return () => clearInterval(interval);
+      }, []);
+    
 
     return (
         <>
@@ -67,7 +77,7 @@ function HomePage ({ projectsRef }) {
                         {/* <div className="text-xl font-bold">Hi, I am Roderick</div> */}
                         <div className="text-xl font-bold">Roderick Cayabyab</div>
                         <div className="text-xl font-">Web Developer</div>
-                        <div className=" max-w-[600px] text-center m-auto pt-8">I'm an independent web developer from Hayward, California
+                        <div className=" max-w-[600px] text-center m-auto pt-8">Hello! I'm an independent web developer from Hayward, California
                             who's fascinated in creating practical webapps for everyday use. As someone who experiences
                             the pain of having to register everytime to use websites, I find enjoyment in creating simple front-end applications with minimal overhead for users.
                             {/* <br /><br />Please see my projects! */}
@@ -80,24 +90,35 @@ function HomePage ({ projectsRef }) {
                     </div>
                 </div>
 
-                <div ref={projectsRef} className="relative bg-neutral-200 bg-contain mt-20">
+                <div ref={projectsRef} className="relative bg-neutral-200 bg-contain pt-10 mt-20">
 
                     <div className="text-center flex flex-col justify-center items-center gap-4 text-xl bg-neutral-200 pt-10 pb-8 font-bold">
-                        <div>Projects</div>
-                        <div
-                            onClick={e => setGifToggle(!gifToggle)} 
-                            className={`${gifToggle ? " text-green-400  " : "text-red-400" } hover:cursor-pointer select-none  text-sm`}>
-                        [Gifs on]
+                        <div>Projects
+
+                                                   <span
+                            onClick={e => setGifToggle(!gifToggle)}
+                            className={`${gifToggle ? " text-green-400  " : "text-red-400"} items-center justify-center mt-1 ml-2 absolute hover:cursor-pointer select-none  text-sm`}>
+                            [Gifs on]
+                        </span>
                         </div>
-                        </div>
+
+ 
+                        {/* <div
+                            onClick={e => setGifToggle(!gifToggle)}
+                            className={`${gifToggle ? " text-green-400  " : "text-red-400"} hover:cursor-pointer select-none  text-sm`}>
+                            [Gifs on]
+                        </div> */}
+                    </div>
 
                     {/* RainbowDarkness */}
                     <div className="
                         lg:flex lg:space-x-[100px] lg:justify-center max-w-[1400px] lg:gap-12 pt-8
                         max-lg:flex-col max-lg:space-y-[100px] max-lg:text-center 
-                        [&>div>div]:m-auto  min-w-[100%] align-middle">
+                        [&>div>div]:m-auto  min-w-[100%] align-middle
+                        pb-10
+                        ">
                         {/* <div className="absolute bg-neutral-200 w-screen h-full" /> */}
-                        <div className="relative [&>div]:max-w-[500px] text-left ">
+                        <div className="relative [&>div]:max-w-[500px] max-lg:[&>div]:w-[400px] text-left ">
                             <div
                                 // onMouseOver={imgMouseOver}
                                 // onMouseLeave={imgMouseLeave} 
@@ -114,7 +135,7 @@ function HomePage ({ projectsRef }) {
 
                                             <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
                                                 <div>Live Site</div>
-                                                <div><img className="w-[60px] bg-white " src={rainbowLogo} alt="stockshapes logo" /></div>
+                                                <div><img className="w-[40px] bg-white " src={rainbowLogo} alt="stockshapes logo" /></div>
                                             </div>
 
                                         </div>
@@ -123,7 +144,9 @@ function HomePage ({ projectsRef }) {
                                 <div className="absolute 
                                     opacity-0 group-hover:opacity-100
                                     group-hover:bg-slate-200 group-hover:bg-opacity-60 h-full w-[50%] right-0">
-                                    <div className="absolute w-full h-[50%] hover:bg-black hover:text-white top-0">
+                                    {/* I want to keep client repos private. */}
+                                    {/* Enable this to make the 50% w split to 2 50% heights */}
+                                    {/* <div className="absolute w-full h-[50%] hover:bg-black hover:text-white top-0">
                                         <div className="absolute gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
                                             <div>
                                                 Client-side
@@ -134,12 +157,13 @@ function HomePage ({ projectsRef }) {
                                                 </svg>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <a target="_blank" rel="noreferrer" href="https://github.com/r-yabyab/rainbowdarkness-server">
-                                        <div className="absolute h-[50%] w-full hover:bg-black hover:text-white bottom-0">
+                                        <div className="absolute h-full w-full hover:bg-black hover:text-white bottom-0">
                                             <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
                                                 <div>
-                                                    Server-side
+                                                    {/* Server-side */}
+                                                    Github (server)
                                                 </div>
                                                 <div>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" viewBox="0 0 16 16">
@@ -164,7 +188,8 @@ function HomePage ({ projectsRef }) {
                                 <div>Rainbow Darkness</div>
                             </div>
                             <div className="font-semibold">React | Express | NodeJS | MongoDB | Vercel</div>
-                            <div className="">Happiness tracking application. Users can compare their scores with the entire userbase. </div>
+                            {/* <div className="">Happiness tracking application. Users can compare their scores with the entire userbase. </div> */}
+                            <div className="">Mental health application that tracks users' daily happiness focused on anonyminity. Users can compare their scores with other people.</div>
                             <div className={boolState ? "text-yellow-400 select-none hover:text-slate-800 hover:cursor-pointer" :
                                 "text-slate-400 select-none hover:text-slate-800 hover:cursor-pointer"}
                                 onClick={boolHandler}
@@ -175,7 +200,7 @@ function HomePage ({ projectsRef }) {
                         </div>
 
                         {/* Stock Shapes */}
-                        <div className="relative text-left [&>div]:max-w-[500px]">
+                        <div className="relative  text-left [&>div]:max-w-[500px] max-lg:[&>div]:w-[400px]">
                             <div
                                 // onMouseOver={imgMouseOver}
                                 // onMouseLeave={imgMouseLeave}
@@ -188,20 +213,20 @@ function HomePage ({ projectsRef }) {
                                     opacity-0 group-hover:opacity-100
                                     group-hover:bg-slate-200 group-hover:bg-opacity-60  hover:bg-opacity-90  h-full w-[50%]  left-0">
                                     <a target="_blank" rel="noreferrer" href="https://stockshapes-client.vercel.app/">
-                                    <div className="hover:bg-black hover:text-white w-full h-full  ">
-                                    
-                                        <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
-                                            <div>Live Site</div>
-                                            <div><img className="w-[60px]" src={stockshapesLogo} alt="stockshapes logo" /></div>
+                                        <div className="hover:bg-black hover:text-white w-full h-full  ">
+
+                                            <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
+                                                <div>Live Site</div>
+                                            <div><img className="w-[40px]" src={stockshapesLogo} alt="stockshapes logo" /></div>
                                         </div>
                                         
-                                    </div>
+                                        </div>
                                     </a>
                                 </div>
                                 <div className="absolute 
                                     opacity-0 group-hover:opacity-100
                                     group-hover:bg-slate-200 group-hover:bg-opacity-60 h-full w-[50%] right-0">
-                                    <div className="absolute w-full h-[50%] hover:bg-black hover:text-white top-0">
+                                    {/* <div className="absolute w-full h-[50%] hover:bg-black hover:text-white top-0">
                                         <div className="absolute gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
                                             <div>
                                                 Client-side
@@ -212,12 +237,13 @@ function HomePage ({ projectsRef }) {
                                                 </svg>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <a target="_blank" rel="noreferrer" href="https://github.com/r-yabyab/cloudstock-server">
-                                    <div className="absolute h-[50%] w-full hover:bg-black hover:text-white bottom-0">
+                                    <div className="absolute h-full w-full hover:bg-black hover:text-white bottom-0">
                                         <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
                                             <div>
-                                                Server-side
+                                                {/* Server-side */}
+                                                Github (server)
                                             </div>
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" viewBox="0 0 16 16">
@@ -335,12 +361,25 @@ function HomePage ({ projectsRef }) {
 
 
 
-                <div className="pt-20 mt-20 pb-48 flex justify-evenly bg-neutral-200">
+                <div className="pt-20 mt-20 pb-48 flex max-md:flex-col max-md:justify-center max-md:items-center max-md:text-center justify-evenly bg-neutral-200">
                     <div className=" bg-neutral-200">
                         <div className="font-bold text-xl text-center pb-8">Education</div>
-                        <div className="flex gap-4 items-center">
-                            <img width='32' src={eblogo} alt='CSUEB logo' />
-                            <div className="text-center">B.A. Psychology 2018-2021</div>
+                        <div className="flex flex-col gap-4">
+                            <div className="flex flex-row gap-4 items-center">
+                                <img width='32' src={eblogo} alt='CSUEB logo' />
+                                <div className="text-center">B.A. Psychology 2018-2021</div>
+                            </div>
+                            <div>
+                                <div>Some Classes Taken:</div>
+                                <div className="[&>div]:indent-8">
+                                    <div>Cognitive Neuroscience</div>
+                                    {/* <div>Humanistic Psychology</div> */}
+                                    <div>Research in Cognitive Psychology</div>
+                                    <div>Psychological Measurement</div>
+                                    <div></div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
@@ -350,24 +389,23 @@ function HomePage ({ projectsRef }) {
                     [&>div>p]:pb-8 [&>div>p]:text-center
                         [&>div>div>img]:object-cover [&>div>div>img]:select-none
                         max-lg:[&>div>div>img]:w-[200px] max-lg:[&>div>div>img]:h-[200px]
-                            lg:[&>div>div>img]:w-[400px] lg:[&>div>div>img]:h-[400px]
+                            lg:[&>div>div>img]:w-[250px] lg:[&>div>div>img]:h-[250px]
                         ">
-                    <div className="pb-8 text-xl font-bold text-center">Hobbies</div>
+                    <div className="pb-8 max-md:pt-20 text-xl font-bold text-center">Hobbies</div>
 
-                        <div>
+                        <div className="flex flex-col items-center justify-center">
                             <p>Playing with my cat & roaming modern art galleries</p>
                             <div>
-                                {/* <img draggable='false' className="" src={TestPFP} alt="cat" /> */}
-                                <img draggable='false' className="" src={gallery2} alt="cat" />
-                                {/* <img draggable='false' className="" src={gallery1} alt="cat" /> */}
+                                {/* <img draggable='false' className="" src={gallery2} alt="cat" /> */}
+                                <img className="" draggable={false} src={images[currentImageIndex]} alt="slider" />
                             </div>
                         </div>
-                        <div>
+                        {/* <div>
                             <div>
                                 <img draggable='false' className="" src={Clay} alt="cat" />
                                 <img draggable='false' className="" src={claygif} alt="cat" />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
