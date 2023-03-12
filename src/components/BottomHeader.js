@@ -19,7 +19,7 @@ function BottomHeader () {
             <div className=" bg-black relative text-white flex justify-center pb-20 pt-20">
                 <div></div>
                 <div className="flex flex-col gap-4">
-                <div className="absolute top-10 -translate-x-1/2 left-[50%]  font-semibold pb-4">Please contact me for any questions!</div>
+                <div className="absolute top-10 -translate-x-1/2 left-[50%]    font-semibold pb-4">Contacts</div>
                 <a 
                     // title="https://www.linkedin.com/in/roderick-cayabyab-30a743158/" 
                     href='https://www.linkedin.com/in/roderick-cayabyab-30a743158/' rel="noreferrer" target='_blank'>
@@ -51,8 +51,9 @@ function BottomHeader () {
                         </svg>
                     </div>
 
-                    <div className="absolute select-none right-[50%] translate-x-1/2 bottom-0 text-white">
-                        Website powered by React and Vercel
+                    <div className="absolute select-none left-0 flex flex-col bottom-0 text-white">
+                        <div>Powered by React and Vercel</div>
+                        <div>© Roderick Cayabyab 2023</div>
                     </div>
                 </div>
 

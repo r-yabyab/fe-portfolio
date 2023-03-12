@@ -8,8 +8,8 @@ import Clay from '../photos/IMG_7622.jpg'
 
 // hobbies
 import claygif from '../photos/claycat.gif'
-import TestPFP from '../photos/aboutmecropped111.png'
-import gallery1 from '../photos/gallery1.jpg'
+// import TestPFP from '../photos/aboutmecropped111.png'
+// import gallery1 from '../photos/gallery1.jpg'
 import gallery2 from '../photos/gallery2.jpg'
 
 
@@ -35,35 +35,26 @@ import rainbowLogo from '../photos/logo-r.ico'
 import stockshapesLogo from '../photos/ss-logo512.png'
 import eblogo from '../photos/eb-logo.png'
 
-function HomePage () {
+function HomePage ({ projectsRef }) {
 
     const [boolState, setBoolState] = useState(false)
             // For hovering over to display extra info
     // const [mouseClass, setMouseClass] = useState(false)
     const [gifToggle, setGifToggle] = useState(true)
 
-    const [imgHover, setImgHover] = useState(false)
+    // const [imgHover, setImgHover] = useState(false)
 
     const boolHandler = () => {
         setBoolState(!boolState)
         console.log(boolState)
     }
 
-    const imgMouseOver = (e) => {
-        setImgHover(true)
-        console.log(imgHover)
-    }
-
-    const imgMouseLeave = (e) => {
-        setImgHover(false)
-        console.log(imgHover)
-    }
 
     return (
         <>
             {/* mainContainer */}
             {/* <div className="relative pl-10 pr-10 m-auto max-w-[1400px] "> */}
-            <div className="relative  ">
+            <div className="relative mt-12 ">
                 {/* <div className="relative m-auto max-w-[1400px]  "> */}
 
                 <div className="
@@ -73,11 +64,13 @@ function HomePage () {
                     <img draggable="false" className=" mb-10 select-none w-[200px] h-[200px] object-cover rounded-full m-auto " src={Linkedin} alt="me" />
                     {/* <div className="text-xl font-bold">About Me</div> */}
                     <div className="">
-                        <div className="text-xl font-bold">Hello! I'm Roderick Cayabyab,</div>
+                        {/* <div className="text-xl font-bold">Hi, I am Roderick</div> */}
+                        <div className="text-xl font-bold">Roderick Cayabyab</div>
+                        <div className="text-xl font-">Web Developer</div>
                         <div className=" max-w-[600px] text-center m-auto pt-8">I'm an independent web developer from Hayward, California
                             who's fascinated in creating practical webapps for everyday use. As someone who experiences
                             the pain of having to register everytime to use websites, I find enjoyment in creating simple front-end applications with minimal overhead for users.
-                            <br /><br />Please see my projects!
+                            {/* <br /><br />Please see my projects! */}
                             {/* <br/><br/>Having a background in psychology, I was interested in ways I can incorporate
                         mental health to simple webpages that is accessible to everyone. I found it unfair that mental
                         health apps today, and tracking apps in general, requires overhead such as registering with emails
@@ -87,7 +80,7 @@ function HomePage () {
                     </div>
                 </div>
 
-                <div className="relative bg-neutral-200 bg-contain mt-20">
+                <div ref={projectsRef} className="relative bg-neutral-200 bg-contain mt-20">
 
                     <div className="text-center flex flex-col justify-center items-center gap-4 text-xl bg-neutral-200 pt-10 pb-8 font-bold">
                         <div>Projects</div>
@@ -280,7 +273,7 @@ function HomePage () {
                         // onMouseOver={e => setMouseClass(true)}
                         // onMouseLeave={e => setMouseClass(false)}
                         >
-                        <div className="text-center pb-8 font-bold text-xl">Tech stack</div>
+                        <div className="text-center pb-8 font-bold text-xl">Skills</div>
                         <div className=
                         {
                             // mouseClass ? 
