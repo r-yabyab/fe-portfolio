@@ -52,7 +52,7 @@ function BottomHeader () {
                     </div>
 
                     <div className="absolute select-none right-[50%] translate-x-1/2 bottom-0 text-white">
-                        Website powered by ReactJS, Git, and Vercel
+                        Website powered by React and Vercel
                     </div>
                 </div>
 
