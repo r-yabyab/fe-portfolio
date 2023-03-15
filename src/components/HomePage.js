@@ -35,7 +35,7 @@ import rainbowLogo from '../photos/logo-r.ico'
 import stockshapesLogo from '../photos/ss-logo512.png'
 import eblogo from '../photos/eb-logo.png'
 
-function HomePage ({ projectsRef }) {
+function HomePage ({ projectsRef, contactClick }) {
 
     // for details if you want to minimize for some reason
     // const [boolState, setBoolState] = useState(false)
@@ -204,7 +204,7 @@ function HomePage ({ projectsRef }) {
 
 
                             <div className="">
-                                <div className=" max-md:pt-8 text-xl text-center pb-4 font-bold flex gap-x-3 justify-center
+                                <div className=" max-lg:pt-8 text-xl text-center pb-4 font-bold flex gap-x-3 justify-center
                 
                                 ">
                                     <img src={stockshapesLogo} width="26" alt="Stock Shapes Logo" />
@@ -296,13 +296,13 @@ function HomePage ({ projectsRef }) {
 
                             </div>
                             <div>
-                            <div className=" max-md:pt-8 text-xl font-bold text-center pb-4 flex gap-x-3 justify-center">
+                            <div className=" max-lg:pt-8 text-xl font-bold text-center pb-4 flex gap-x-3 justify-center">
                                 <img src={rainbowLogo} width="26" alt="Rainbow Darkness Logo" />
                                 <div>Rainbow Darkness</div>
                             </div>
                             <div className="font-semibold">React | Express | NodeJS | MongoDB | Vercel</div>
                             {/* <div className="">Happiness tracking application. Users can compare their scores with the entire userbase. </div> */}
-                            <div className="">Mental health application that tracks users' daily happiness focused on anonyminity. Users can compare their scores with other people.</div>
+                            <div className="">A quick and privacy-focused mental health application that tracks your daily happiness. Users can compare their scores with other people.</div>
                             {/* <div className={boolState ? "text-yellow-400 select-none hover:text-slate-800 hover:cursor-pointer" :
                                 "text-slate-400 select-none hover:text-slate-800 hover:cursor-pointer"}
                                 onClick={boolHandler}
@@ -314,7 +314,12 @@ function HomePage ({ projectsRef }) {
                             // {boolState ? "bg-slate-200 hover:cursor-pointer" : "hidden"}
                             {'pt-8'}
                             >
-                                An anonymous way of comparing your happiness to the entire userbase
+                                Data is stored on MongoDB without any user IDs, making all entries anonymous. Users have access to their previous
+                                entries through local storage, however, I believe sacrificing some privacy to implement user logins & adsense would be more
+                                sustainable profit- and data-wise as users are prompted to visit everyday and may need to access data across devices (plans for this in the future).
+                                {/* sacrificing privacy */}
+                                {/* it would be more sustainable to sacrifice some privacy for user logins
+                                & adsense as users are prompted to visit everyday. */}
                             </div>
                             </div>
                         </div>
@@ -400,8 +405,8 @@ function HomePage ({ projectsRef }) {
                                 <div className="text-center">B.A. Psychology 2018-2021</div>
                             </div>
                             <div>
-                                <div>Some Classes Taken:</div>
-                                <div className="[&>div]:indent-8">
+                                <div className="max-lg:text-left">Some Classes Taken:</div>
+                                <div className="[&>div]:indent-8 text-left">
                                     <div>Cognitive Neuroscience</div>
                                     {/* <div>Humanistic Psychology</div> */}
                                     <div>Research in Cognitive Psychology</div>
@@ -441,7 +446,7 @@ function HomePage ({ projectsRef }) {
 
             </div>
 
-            <BottomHeader />
+            <BottomHeader contactClick={contactClick} />
 
         </>
     )

@@ -28,3 +28,14 @@
       
   }
 }
+
+.ratingAnimationToBlack {
+    animation: 1.5s 0s 1 fadeToBlack;
+}
+
+@keyframes fadeToBlack{
+    0% { background-color: green;
+
+     }
+100% { background-color: black; }
+}

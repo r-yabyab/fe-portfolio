@@ -6,6 +6,7 @@ import TopNav from './components/TopNav';
 function App() {
 
   const [detectScrollPosition, setDetectScrollPosition] = useState(0)
+  const [contactClick, setContactClick] = useState(false)
 
 
   useEffect(() => {
@@ -41,6 +42,10 @@ function App() {
 
   const scrollToBottom = (e) => {
     window.scrollTo(0, document.body.scrollHeight);
+    setContactClick(true)
+    setTimeout(() => {
+      setContactClick(false);
+    }, 1000);
   }
 
 
@@ -52,11 +57,13 @@ function App() {
         scrollToProjects={scrollToProjects}
         detectScrollPosition={detectScrollPosition} 
         scrollToBottom={scrollToBottom}
+        contactClick={contactClick}
         />
       {/* <div className='fixed top-[50%] z-50 text-lg text-green-400'>penis{detectScrollPosition}</div> */}
       <HomePage
         projectsRef={projectsRef}
         scrollToTop={scrollToTop}
+        contactClick={contactClick}
       />
 
     </>
