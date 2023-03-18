@@ -212,7 +212,8 @@ function HomePage ({ projectsRef, contactClick }) {
                                 </div>
                                 <div className="font-semibold">React | Express | NodeJS | Vercel | EC2</div>
                                 {/* <div className="">Real-time stock & future updates with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
-                                <div className="">Real-time stock prices with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div>
+                                {/* <div className="">Real-time stock prices with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
+                                <div className="">Stock shapes subscribes to data from Investors Exchange (4th most popular US stock exchange), giving users direct access to live trade-executed prices. Paired with moveable and resizable quotes, Stock Shapes can aid your trading sessions by resizing the browser to your liking. It's also mobile friendly!</div>
                                 {/* <div className={boolState ? "text-yellow-400 select-none hover:text-slate-800 hover:cursor-pointer" :
                                     "text-slate-400 select-none hover:text-slate-800 hover:cursor-pointer"}
                                     onClick={boolHandler}
@@ -223,7 +224,9 @@ function HomePage ({ projectsRef, contactClick }) {
                                     // {boolState ? "bg-slate-200 hover:cursor-pointer" : "hidden"}
                                     {"pt-8"}
                                 >
-                                    Pulls data from IEX Cloud API, uses server-sent-events (SSE) to feed live price updates to clients. Serverside deployed to EC2 as a way to accomodate live events that serverless computing cannot support natively. $50 a month for my API costs, one session from market open to close tends to run around $1-4 per user that displays 5 stocks. Currently working on optimizing API calls to minimize API costs.
+                                    {/*[vers3] Building Stock Shapes gave me experience on how to navigate sparsely written API documentation with broken endpoints. It also shed light on why free stock tracking apps don't provide consistently fast price updates-- It's expensive. */}
+                                    Building Stock Shapes taught me why free stock tracking apps don't offer consistently fast price updates. It's expensive, and to offer additional data (i.e. futures like NASDAQ & S&P500) requires steep licensing fees, with use-cases being mostly for algo-trading. I enjoy seeing prices update 100 times a second on trading platforms, but to run just 5 high volume stocks on Stock Shapes for several hours costs ~$1-5.
+                                    {/*[vers1] Pulls data from IEX Cloud API, uses server-sent-events (SSE) to feed live price updates to clients. Serverside deployed to EC2 as a way to accomodate live events that serverless computing cannot support out the box. $50 a month for my API costs, one session from market open to close tends to run around $1-8 per user that displays 5 stocks. Currently working on optimizing API calls to minimize costs. */}
                                 </div>
                             </div>
                         </div>
