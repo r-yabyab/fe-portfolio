@@ -21,7 +21,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    document.title='Portfolio'
+    document.title='Roderick Cayabyab'
   }, [])
 
 
