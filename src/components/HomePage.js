@@ -3,6 +3,7 @@ import BottomHeader from "./BottomHeader";
 
 // import RainbowDarkness from '../photos/3bf40ef49cba4e57b04b9319472d3d32.png'
 import Linkedin from '../photos/linked.jpg'
+import Linkedin1 from '../photos/linked1.png'
 // import CloudStock from '../photos/0adfa6c3203466b17c21befa04d7a3ee.png'
 import Clay from '../photos/IMG_7622.jpg'
 
@@ -72,7 +73,7 @@ function HomePage ({ projectsRef, contactClick }) {
                 text-center pt-16 ml-10 mr-10
                 lg:fle
                 ">
-                    <img draggable="false" className=" mb-10 select-none w-[200px] h-[200px] object-cover rounded-full m-auto " src={Linkedin} alt="me" />
+                    <img draggable="false" className=" mb-10 select-none w-[200px] h-[200px] object-cover rounded-full m-auto " src={Linkedin1} alt="me" />
                     {/* <div className="text-xl font-bold">About Me</div> */}
                     <div className="">
                         {/* <div className="text-xl font-bold">Hi, I am Roderick</div> */}
