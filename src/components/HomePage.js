@@ -79,7 +79,7 @@ function HomePage ({ projectsRef, contactClick }) {
                         <div className="text-xl font-bold">Roderick Cayabyab</div>
                         <div className="text-xl font-">Web Developer</div>
                         <div className=" max-w-[600px] text-center m-auto pt-8">Hello! I'm an independent web developer from Hayward, California
-                            who's fascinated in creating practical webapps for everyday use. As someone who experiences
+                            who's fascinated in creating practical webapps for everyday use. As someone who experiences 
                             {/* the pain of having to register everytime to use websites, I find enjoyment in creating simple front-end applications with minimal overhead for users. */}
                             the pain of having to register everytime to use websites, I find enjoyment in getting users up and running on page visit.
                             {/* <br /><br />Please see my projects! */}
