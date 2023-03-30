@@ -30,7 +30,8 @@ import rCover from '../photos/r-cover.png'
 import rGif1 from '../photos/r-gif1.gif'
 
 // logos
-import rainbowLogo from '../photos/logo-r.ico'
+// import rainbowLogo from '../photos/logo-r.ico'
+import rainbowLogo from '../photos/r1-logo192.png'
 // import rainbowEye from '../photos/logo512.png'
 import stockshapesLogo from '../photos/ss-logo512.png'
 import eblogo from '../photos/eb-logo.png'
@@ -251,7 +252,7 @@ function HomePage ({ projectsRef, contactClick }) {
 
                                             <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
                                                 <div>Live Site</div>
-                                                <div><img className="w-[40px] bg-white " src={rainbowLogo} alt="stockshapes logo" /></div>
+                                                <div><img className="w-[40px]  " src={rainbowLogo} alt="stockshapes logo" /></div>
                                             </div>
 
                                         </div>
