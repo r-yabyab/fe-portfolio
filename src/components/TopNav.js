@@ -34,7 +34,7 @@ function TopNav ({
                 </div>
             </div> */}
             {/* <div className="fixed z-50"> */}
-            <div className="fixed top-0 left-0 w-full z-50  bg-black text-white pt-3 pb-12 text-2xl">
+            <div className="fixed top-0 left-0 w-full z-50 shadow-md bg-zinc-800 text-zinc-200 pt-3 pb-12 text-2xl">
                 {/* <div className="ml-8 absolute"><span className="font-bold">Roderick Cayabyab</span> <span className="max-md:hidden">| Web Developer</span></div> */}
                 <div className="ml-8 select-none absolute">
                     <span onClick={scrollToTop} className="hover:text-yellow-300 hover:cursor-pointer">Roderick Cayabyab </span>
@@ -57,7 +57,7 @@ function TopNav ({
                         onClick={clickHandler}
                         >
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor"
-                            className={`${menu ? 'text-gray-400' : 'text-white'}  hover:text-gray-200`} viewBox="0 0 16 16">
+                            className={`${menu ? 'text-gray-400' : 'text-zinc-200'}  hover:text-gray-200`} viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                         </svg>
                         <div className={`${menu ? '' : 'hidden'} absolute right-0 -mr-4 [&>*]:pr-8 [&>*]:pl-8 border-t-4 border-green-400 text-left top-12 bg-black flex  [&>*]:pt-2 [&>*]:pb-2 flex-col gap-0 `}>

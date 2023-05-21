@@ -66,7 +66,7 @@ function HomePage ({ projectsRef, contactClick }) {
         <>
             {/* mainContainer */}
             {/* <div className="relative pl-10 pr-10 m-auto max-w-[1400px] "> */}
-            <div className="relative mt-12 ">
+            <div className="relative mt-12 text-zinc-900 ">
                 {/* <div className="relative m-auto max-w-[1400px]  "> */}
 
                 <div className="
@@ -214,12 +214,12 @@ function HomePage ({ projectsRef, contactClick }) {
 
 
                             <div className="">
-                                <div className=" max-lg:pt-8 text-xl text-center pb-4 font-bold flex gap-x-3 justify-center
-                
-                                ">
-                                    <img src={stockshapesLogo} width="26" alt="Stock Shapes Logo" />
-                                    <div>Stock Shapes</div>
+                            <div className=" max-lg:pt-8 text-xl font-bold text-center mb-4  ">
+                                <div className="flex gap-x-3 justify-center w-[200px] bg-blue-200 p-2 rounded-md m-auto  align-middle items-center">
+                                <img src={stockshapesLogo} width="26" alt="Rainbow Darkness Logo" />
+                                <div>Stock Shapes</div>
                                 </div>
+                            </div>
                                 <div className="font-semibold">React | Node.js | Vercel | EC2</div>
                                 {/* <div className="">Real-time stock & future updates with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
                                 {/* <div className="">Real-time stock prices with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
@@ -310,9 +310,11 @@ function HomePage ({ projectsRef, contactClick }) {
 
                             </div>
                             <div>
-                            <div className=" max-lg:pt-8 text-xl font-bold text-center pb-4 flex gap-x-3 justify-center">
+                            <div className=" max-lg:pt-8 text-xl font-bold text-center mb-4  ">
+                                <div className="flex gap-x-3 justify-center w-[260px] bg-blue-200 p-2 rounded-md m-auto  align-middle items-center">
                                 <img src={rainbowLogo} width="26" alt="Rainbow Darkness Logo" />
                                 <div>Rainbow Darkness</div>
+                                </div>
                             </div>
                             <div className="font-semibold">React | Node.js | Redux | D3.js | MongoDB | AWS EC2</div>
                             {/* <div className="">Happiness tracking application. Users can compare their scores with the entire userbase. </div> */}

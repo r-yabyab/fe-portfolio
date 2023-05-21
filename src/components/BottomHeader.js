@@ -16,7 +16,7 @@ function BottomHeader ({ contactClick }) {
     return (
         <>
             {/* <div className="absolute bg-neutral-300 w-full pb-10 pt-10"> */}
-            <div className={`${contactClick ? 'ratingAnimationToBlack' : ''} bg-black relative text-white flex justify-center pb-28 pt-20`}>
+            <div className={`${contactClick ? 'ratingAnimationToBlack' : ''} bg-zinc-800 relative text-white flex justify-center pb-28 pt-20`}>
                 <div></div>
                 <div className="flex flex-row gap-8">
                     <div className="absolute top-10 -translate-x-1/2 left-[50%]    font-semibold pb-4">Contacts</div>
