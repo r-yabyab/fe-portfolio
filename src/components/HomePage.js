@@ -79,9 +79,17 @@ function HomePage ({ projectsRef, contactClick }) {
                         {/* <div className="text-xl font-bold">Hi, I am Roderick</div> */}
                         <div className="text-xl font-bold">Roderick Cayabyab</div>
                         <div className="text-xl font-">Web Developer</div>
-                        <div className=" max-w-[600px] text-center m-auto pt-8">Hello! I'm an independent web developer from Hayward, California
-                            who's fascinated in creating practical webapps for everyday use. As someone who experiences 
-                            the pain of having to register everytime to use websites, I find enjoyment in getting users up and running on page visit.
+                        <div className=" max-w-[600px] text-center m-auto pt-8">
+                            Hello! I'm an independent web developer from Hayward, California
+                            who's fascinated in creating practical webapps for everyday use. I specialize in front-end development, where my goal is to get users engaged with minimal overhead.
+                            <br/><br/>During my time studying psychology, I found it unfair that the majority of psychological research goes unnoticed, specifically in non-pharmaceutical mental health. With the prevalence of anxiety and depression rising each year, I find ease in creating web apps that extends beyond personality tests and bloated mental health applications.
+                            
+                            {/* It's odd that in the continuous rise of anxiety and depression, there has been little to no intervention in the */}
+                            
+                            {/* Web development equipments me with the tools to extend my knowledge 
+                            Having a background in psychology equips me with the tools to make websites more human
+                            people's lives that extends beyond private research.   */}
+
                             {/* the pain of having to register everytime to use websites, I find enjoyment in creating simple front-end applications with minimal overhead for users. */}
                             {/* <br /><br />Please see my projects! */}
                             {/* <br/><br/>Having a background in psychology, I was interested in ways I can incorporate
@@ -115,7 +123,7 @@ function HomePage ({ projectsRef, contactClick }) {
 
                     {/* Projects Container */}
                     <div className="
-                        lg:flex lg:flex-col lg:space-x-[0px] lg:justify-center lg:items-center lg:[&>div]:gap-24
+                        lg:flex lg:flex-col-reverse lg:space-x-[0px] lg:justify-center lg:items-center lg:[&>div]:gap-24
                         max-w-[1400px] lg:gap-20 pt-8
                         max-lg:[&>div]:flex-col max-lg:space-y-[100px] max-lg:text-center 
                         [&>div>div]:m-auto  min-w-[100%] align-middle
@@ -212,10 +220,11 @@ function HomePage ({ projectsRef, contactClick }) {
                                     <img src={stockshapesLogo} width="26" alt="Stock Shapes Logo" />
                                     <div>Stock Shapes</div>
                                 </div>
-                                <div className="font-semibold">React | Express | NodeJS | Vercel | EC2</div>
+                                <div className="font-semibold">React | Node.js | Vercel | EC2</div>
                                 {/* <div className="">Real-time stock & future updates with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
                                 {/* <div className="">Real-time stock prices with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
-                                <div className="">Stock shapes subscribes to data from Investors Exchange (4th most popular US stock exchange), giving users direct access to live trade-executed prices. Paired with moveable and resizable quotes, Stock Shapes can aid your trading sessions by resizing the browser to your liking. It's also mobile friendly!</div>
+                                <div className="">Portable & snappy real time stock prices. Use it to aid your trading sessions by resizing the browser / stock quotes to your liking.
+                                <br/> <span className="text-red-600">*Live data shows on weekdays from 6:30AM - 1:30PM.</span></div>
                                 {/* <div className={boolState ? "text-yellow-400 select-none hover:text-slate-800 hover:cursor-pointer" :
                                     "text-slate-400 select-none hover:text-slate-800 hover:cursor-pointer"}
                                     onClick={boolHandler}
@@ -227,7 +236,7 @@ function HomePage ({ projectsRef, contactClick }) {
                                     {"pt-8"}
                                 >
                                     {/*[vers3] Building Stock Shapes gave me experience on how to navigate sparsely written API documentation with broken endpoints. It also shed light on why free stock tracking apps don't provide consistently fast price updates-- It's expensive. */}
-                                    Building Stock Shapes taught me why free stock tracking apps don't offer consistently fast price updates. It's expensive, and to offer additional data (i.e. futures like NASDAQ & S&P500) requires steep licensing fees, with use-cases being mostly for algo-trading. I enjoy seeing prices update 100 times a second on trading platforms, but to run just 5 high volume stocks on Stock Shapes for several hours costs ~$1-5.
+                                    Building Stock Shapes made me realize that fast & snappy prices are best fitted for private-use. Making the data public calls for hacky workarounds, and integrating additional data (i.e. futures like NASDAQ & S&P500... think 100s of updates per second) requires thousands of $ in licensing fees. <br/>To provide 100% uptime, I had to mitigate 429 errors by writing pm2 scripts on EC2 as iexCloud's SSE connections close only when the node.js app terminates.
                                     {/*[vers1] Pulls data from IEX Cloud API, uses server-sent-events (SSE) to feed live price updates to clients. Serverside deployed to EC2 as a way to accomodate live events that serverless computing cannot support out the box. $50 a month for my API costs, one session from market open to close tends to run around $1-8 per user that displays 5 stocks. Currently working on optimizing API calls to minimize costs. */}
                                 </div>
                             </div>
@@ -305,9 +314,9 @@ function HomePage ({ projectsRef, contactClick }) {
                                 <img src={rainbowLogo} width="26" alt="Rainbow Darkness Logo" />
                                 <div>Rainbow Darkness</div>
                             </div>
-                            <div className="font-semibold">React | Express | NodeJS | MongoDB | Vercel</div>
+                            <div className="font-semibold">React | Node.js | Redux | D3.js | MongoDB | AWS EC2</div>
                             {/* <div className="">Happiness tracking application. Users can compare their scores with the entire userbase. </div> */}
-                            <div className="">A quick and privacy-focused mental health application that tracks your daily happiness. Users can compare their scores with other people.</div>
+                            <div className="">Mental health application that tracks your daily happiness, in addition to time slept, activities, and memos. </div>
                             {/* <div className={boolState ? "text-yellow-400 select-none hover:text-slate-800 hover:cursor-pointer" :
                                 "text-slate-400 select-none hover:text-slate-800 hover:cursor-pointer"}
                                 onClick={boolHandler}
@@ -319,9 +328,8 @@ function HomePage ({ projectsRef, contactClick }) {
                             // {boolState ? "bg-slate-200 hover:cursor-pointer" : "hidden"}
                             {'pt-8'}
                             >
-                                Data is stored on MongoDB without any user IDs, making all entries anonymous. Users have access to their previous
-                                entries through local storage, however, I believe sacrificing some privacy to implement user logins & adsense would be more
-                                sustainable profit- and data-wise as users are prompted to visit everyday and may need to access data across devices (plans for this in the future).
+                                A lot of effort spent towards accommodating non-registered users since local storage needs to interact with the database. Overall, a simple project with attention to providing a smooth experience, no matter when or where users decide to visit. This project has taught me how to tackle scalability when it comes to data processing and state management.
+
                                 {/* sacrificing privacy */}
                                 {/* it would be more sustainable to sacrifice some privacy for user logins
                                 & adsense as users are prompted to visit everyday. */}
@@ -410,13 +418,12 @@ function HomePage ({ projectsRef, contactClick }) {
                                 <div className="text-center">B.A. Psychology 2018-2021</div>
                             </div>
                             <div>
-                                <div className="max-lg:text-left">Some Classes Taken:</div>
+                                <div className="max-lg:text-left">Classes:</div>
                                 <div className="[&>div]:indent-8 text-left">
                                     <div>Cognitive Neuroscience</div>
                                     {/* <div>Humanistic Psychology</div> */}
                                     <div>Research in Cognitive Psychology</div>
                                     <div>Psychological Measurement</div>
-                                    <div></div>
                                 </div>
 
                             </div>

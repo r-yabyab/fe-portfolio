@@ -61,7 +61,7 @@ function BottomHeader ({ contactClick }) {
                         </svg>
                     </div>
 
-                    <div className="absolute select-none left-0 flex flex-col bottom-0 text-white">
+                    <div className="absolute select-none left-2 flex flex-col bottom-2 text-zinc-500 text-sm tracking-tight">
                         <div>Powered by React and Vercel</div>
                         <div>© Roderick Cayabyab 2023</div>
                     </div>
