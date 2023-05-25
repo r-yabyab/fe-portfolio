@@ -82,8 +82,10 @@ function HomePage ({ projectsRef, contactClick }) {
                         <div className=" max-w-[600px] text-center m-auto pt-8">
                             Hello! I'm an independent web developer from Hayward, California
                             who's fascinated in creating practical webapps for everyday use. I specialize in front-end development, where my goal is to get users engaged with minimal overhead.
-                            <br/><br/>During my time studying psychology, I found it unfair that the majority of psychological research goes unnoticed, specifically in non-pharmaceutical mental health. With the prevalence of anxiety and depression rising each year, I find ease in creating web apps that extends beyond personality tests and bloated mental health applications.
-                            
+                            {/* <br/><br/>During my time studying psychology, I found it unfair that the majority of psychological research goes unnoticed, specifically in well-being studies. With the prevalence of anxiety and depression rising each year, I find ease in creating web apps that extends beyond personality tests and bloated mental health applications. */}
+                            <br/><br/>When I'm not pushing new features to my projects, you can find me contributing to open source. I focus on fixing responsive design edge-cases, specifically in navigation bars.
+
+
                             {/* It's odd that in the continuous rise of anxiety and depression, there has been little to no intervention in the */}
                             
                             {/* Web development equipments me with the tools to extend my knowledge 
