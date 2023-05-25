@@ -460,6 +460,23 @@ function HomePage ({ projectsRef, contactClick }) {
                     </div>
                 </div>
 
+                <div className="md:pt-20 max-md:mt-20 pb-48">
+                    <div className="text-xl text-center font-bold">Open Source Contributions</div>
+                    <div className="flex md:[&>div]:max-w-[300px] md:flex-row max-md:flex-col max-md:text-center max-md:gap-y-8 max-md:justify-center md:justify-evenly pt-8">
+                        <div>
+                            <div>Pending PR's</div>
+                            <a 
+                                className="hover:cursor-pointer hover:text-blue-600 text-blue-400 underline"
+                                href="https://github.com/vertcoin-project/vertcoin-project.github.io/pull/8" target="__blank">
+                                Breakpoint issue @ top navbar for vertcoin.org
+                            </a>
+                        </div>
+                        <div>
+                            <div>Merged PR's</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <BottomHeader contactClick={contactClick} />
