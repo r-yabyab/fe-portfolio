@@ -463,12 +463,17 @@ function HomePage ({ projectsRef, contactClick }) {
                 <div className="md:pt-20 max-md:mt-20 pb-48">
                     <div className="text-xl text-center font-bold">Open Source Contributions</div>
                     <div className="flex md:[&>div]:max-w-[300px] md:flex-row max-md:flex-col max-md:text-center max-md:gap-y-8 max-md:justify-center md:justify-evenly pt-8">
-                        <div>
+                        <div className="flex flex-col gap-4">
                             <div>Under Review</div>
                             <a 
                                 className="hover:cursor-pointer hover:text-blue-600 text-blue-400 underline"
                                 href="https://github.com/RavenProject/ravenproject.github.io/pull/265" target="__blank">
-                                Fixed twitter iframe centering using tailwind for ravencoin.org
+                                Fixed twitter iframe centering using tailwind (ravencoin.org) #265
+                            </a>
+                            <a 
+                                className="hover:cursor-pointer hover:text-blue-600 text-blue-400 underline" 
+                                href="https://github.com/vertcoin-project/vertcoin-project.github.io/pull/9" target="__blank">
+                            Added menu button for mobile view (vertcoin.org) #9
                             </a>
                         </div>
                         <div>
@@ -476,7 +481,7 @@ function HomePage ({ projectsRef, contactClick }) {
                             <a 
                                 className="hover:cursor-pointer hover:text-blue-600 text-blue-400 underline"
                                 href="https://github.com/vertcoin-project/vertcoin-project.github.io/pull/8" target="__blank">
-                                Top navbar breakpoint issue @ 767px for vertcoin.org
+                                Top navbar breakpoint issue @ 767px (vertcoin.org) #8
                                 </a>
                         </div>
                     </div>
