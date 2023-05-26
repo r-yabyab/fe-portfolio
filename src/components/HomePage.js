@@ -464,15 +464,20 @@ function HomePage ({ projectsRef, contactClick }) {
                     <div className="text-xl text-center font-bold">Open Source Contributions</div>
                     <div className="flex md:[&>div]:max-w-[300px] md:flex-row max-md:flex-col max-md:text-center max-md:gap-y-8 max-md:justify-center md:justify-evenly pt-8">
                         <div>
-                            <div>Pending PR's</div>
+                            <div>Under Review</div>
                             <a 
                                 className="hover:cursor-pointer hover:text-blue-600 text-blue-400 underline"
-                                href="https://github.com/vertcoin-project/vertcoin-project.github.io/pull/8" target="__blank">
-                                Breakpoint issue @ top navbar for vertcoin.org
+                                href="https://github.com/RavenProject/ravenproject.github.io/pull/265" target="__blank">
+                                Fixed twitter iframe centering using tailwind for ravencoin.org
                             </a>
                         </div>
                         <div>
-                            <div>Merged PR's</div>
+                            <div>Merged PRs</div>
+                            <a 
+                                className="hover:cursor-pointer hover:text-blue-600 text-blue-400 underline"
+                                href="https://github.com/vertcoin-project/vertcoin-project.github.io/pull/8" target="__blank">
+                                Top navbar breakpoint issue @ 767px for vertcoin.org
+                                </a>
                         </div>
                     </div>
                 </div>
