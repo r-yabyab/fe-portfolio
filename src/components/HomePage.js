@@ -230,7 +230,7 @@ function HomePage ({ projectsRef, contactClick }) {
                                 {/* <div className="">Real-time stock & future updates with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
                                 {/* <div className="">Real-time stock prices with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
                                 <div className="">Portable & snappy stock prices. Aid your trading sessions by resizing the browser / stock quotes to your liking.
-                                <br/> <span className="text-red-600">*Live data shows on weekdays from 6:30AM - 1:30PM.</span></div>
+                                <br/> <span className="text-red-600">*Live data shows on weekdays from 6:30AM - 1:30PM PST.</span></div>
                                 {/* <div className={boolState ? "text-yellow-400 select-none hover:text-slate-800 hover:cursor-pointer" :
                                     "text-slate-400 select-none hover:text-slate-800 hover:cursor-pointer"}
                                     onClick={boolHandler}
