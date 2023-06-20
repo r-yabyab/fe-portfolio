@@ -18,6 +18,9 @@ import ec2 from '../photos/ec2-logo.png'
 import nodejs from '../photos/nodejs.png'
 import html5 from '../photos/html-logo.png'
 import css3 from '../photos/css-logo.png'
+import jenkins from '../photos/jenkins.png'
+import docker from '../photos/docker.png'
+import kubies from '../photos/Kubernetes_logo_without_workmark.svg.png'
 
 // website pictures
 import stockshapes from '../photos/stockshapes.png'
@@ -28,6 +31,7 @@ import ssSlow from '../photos/ss-slow-gif.gif'
 import rCover from '../photos/r-cover.png'
 // import rGif from '../photos/r-gif.gif'
 import rGif1 from '../photos/r-gif1.gif'
+import stocksh from '../photos/stocksh.gif'
 
 // logos
 // import rainbowLogo from '../photos/logo-r.ico'
@@ -81,7 +85,7 @@ function HomePage ({ projectsRef, contactClick }) {
                         <div className="text-xl font-">Web Developer</div>
                         <div className=" max-w-[600px] text-center m-auto pt-8">
                             Hello! I'm an independent web developer from Hayward, California
-                            who's fascinated in creating practical webapps for everyday use. I specialize in front-end development, where my goal is to get users engaged with minimal overhead.
+                            who's fascinated in creating practical webapps for everyday use. I specialize in front-end development, where my goal is to get users engaged with minimal overhead. I also find interest in devops practices because it allows me to host applications with the cheapest rates while streamlining the deployment process.
                             {/* <br/><br/>During my time studying psychology, I found it unfair that the majority of psychological research goes unnoticed, specifically in well-being studies. With the prevalence of anxiety and depression rising each year, I find ease in creating web apps that extends beyond personality tests and bloated mental health applications. */}
                             <br/><br/>When I'm not pushing new features to my projects, you can find me contributing to open source. I focus on fixing responsive design edge-cases, specifically in navigation bars.
 
@@ -177,12 +181,12 @@ function HomePage ({ projectsRef, contactClick }) {
                                             </div>
                                         </div>
                                     </div> */}
-                                    <a target="_blank" rel="noreferrer" href="https://github.com/r-yabyab/cloudstock-server">
+                                    <a target="_blank" rel="noreferrer" href="https://github.com/r-yabyab/cloudstock">
                                     <div className="absolute h-full w-full hover:bg-black hover:text-white bottom-0">
                                         <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
                                             <div>
                                                 {/* Server-side */}
-                                                Github (server)
+                                                Github (client)
                                             </div>
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" viewBox="0 0 16 16">
@@ -202,7 +206,7 @@ function HomePage ({ projectsRef, contactClick }) {
                                 {/* <div className={`${imgHover ? "opacity-20" :null } h-[400px] flex flex-col gap-8 items-center justify-center bg-white`}> */}
                                 <div className={gifToggle ? 'h-[400px] flex flex-col gap-8 items-center justify-center bg-white' : 'hidden'}>
                                     <img className="  object-cover" src={ssSlow} alt="stockshapes gif 1" />
-                                    <img className="  object-cover" src={ssFast} alt="stockshapes gif 2" />
+                                    <img className="  object-cover" src={stocksh} alt="stockshapes gif 2" />
                                 </div>
                                 <img className={gifToggle ? 'hidden' : "aspect-square h-[400px] object-cover"} src={stockshapes} alt="Rainbow Darkness.png" />
 
@@ -286,12 +290,12 @@ function HomePage ({ projectsRef, contactClick }) {
                                             </div>
                                         </div>
                                     </div> */}
-                                    <a target="_blank" rel="noreferrer" href="https://github.com/r-yabyab/rainbowdarkness-server">
+                                    <a target="_blank" rel="noreferrer" href="https://github.com/r-yabyab/rainbowdarkness-client">
                                         <div className="absolute h-full w-full hover:bg-black hover:text-white bottom-0">
                                             <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
                                                 <div>
                                                     {/* Server-side */}
-                                                    Github (server)
+                                                    Github (client)
                                                 </div>
                                                 <div>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" viewBox="0 0 16 16">
@@ -332,7 +336,7 @@ function HomePage ({ projectsRef, contactClick }) {
                             // {boolState ? "bg-slate-200 hover:cursor-pointer" : "hidden"}
                             {'pt-8'}
                             >
-                                A lot of effort spent towards accommodating non-registered users since local storage needs to interact with the database. Overall, a simple project with attention to providing a smooth experience, no matter when or where users decide to visit. This project has taught me how to tackle scalability when it comes to data processing and state management.
+                                Some effort has been spent towards accommodating non-registered users since local storage needs to interact with the database. Overall, a simple project with attention to providing a smooth experience, no matter when or where users decide to visit. This project has taught me how to tackle scalability when it comes to data processing and state management.
 
                                 {/* sacrificing privacy */}
                                 {/* it would be more sustainable to sacrifice some privacy for user logins
@@ -357,9 +361,9 @@ function HomePage ({ projectsRef, contactClick }) {
                             // mouseClass ? 
                         `flex justify-evenly flex-row max-lg:flex-wrap max-w-[1400px] m-auto
                         max-lg:[&>div]:basis-[20%] max-lg:gap-y-20
-                            max-md:[&>div]:basis-[30%] 
+                            max-md:[&>div]:basis-[33%] 
                         [&>div>p]:text-center [&>div>p]:pb-4 
-                        [&>div>img]:m-auto
+                        [&>div>img]:m-auto select-none
                         `
                         // :
                         // `flex justify-evenly items-center flex-row max-lg:flex-wrap
@@ -377,14 +381,14 @@ function HomePage ({ projectsRef, contactClick }) {
                                 <p>JavaScript</p>
                                 <img width="64" alt="JavaScript-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/64px-JavaScript-logo.png" />
                             </div>
-                            <div>
+                            {/* <div>
                                 <p>HTML</p>
                                 <img width="64" src={html5} alt="HTML Logo" />
                             </div>
                             <div>
                                 <p>CSS</p>
                                 <img width="64" src={css3} alt="CSS Logo" />
-                            </div>
+                            </div> */}
                             <div>
                                 <p>Express</p>
                                 <img className="pt-5" width="64" alt="Expressjs" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" />
@@ -398,13 +402,25 @@ function HomePage ({ projectsRef, contactClick }) {
                                 <p>MongoDB</p>
                                 <img className="pt-5" width="64" alt="MongoDB Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/64px-MongoDB_Logo.svg.png" />
                             </div>
-                            <div>
+                            {/* <div>
                                 <p>Vercel</p>
                                 <img width="64" src={vercel} alt="Vercel Logo" />
-                            </div>
+                            </div> */}
                             <div>
                                 <p>Amazon EC2</p>
                                 <img width="64" src={ec2} alt="Amazon EC2 Logo" />
+                            </div>
+                            <div>
+                                <p>Docker</p>
+                                <img width="64" src={docker} alt="Docker Logo" />
+                            </div>
+                            <div>
+                                <p>Jenkins</p>
+                                <img width="64" src={jenkins} alt="Jenkins Logo" />
+                            </div>
+                            <div>
+                                <p>Kubernetes</p>
+                                <img width="64" src={kubies} alt="Kubernetes Logo" />
                             </div>
                         </div>
                     </div>
