@@ -82,12 +82,19 @@ function HomePage ({ projectsRef, contactClick }) {
                     <div className="">
                         {/* <div className="text-xl font-bold">Hi, I am Roderick</div> */}
                         <div className="text-xl font-bold">Roderick Cayabyab</div>
-                        <div className="text-xl font-">Web Developer</div>
+                        <div className="flex justify-center gap-2">
+                            <a href='https://github.com/r-yabyab' rel="noreferrer" target='_blank'>
+                                <svg className="hover:text-gray-400 hover:cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <div className="text-xl font-">Web Developer</div>
+                        </div>
                         <div className=" max-w-[600px] text-center m-auto pt-8">
                             Hello! I'm an independent web developer from Hayward, California
-                            who's fascinated in creating practical webapps for everyday use. I specialize in front-end development, where my goal is to get users engaged with minimal overhead. I also find interest in devops practices because it allows me to host applications with the cheapest rates while streamlining the deployment process.
+                            who's fascinated in creating practical webapps for everyday use. I specialize in front-end development, where my goal is to get users engaged with minimal overhead. I also find interest in devops practices because it allows me to have full control over my applications while streamlining the deployment process.
                             {/* <br/><br/>During my time studying psychology, I found it unfair that the majority of psychological research goes unnoticed, specifically in well-being studies. With the prevalence of anxiety and depression rising each year, I find ease in creating web apps that extends beyond personality tests and bloated mental health applications. */}
-                            <br/><br/>When I'm not pushing new features to my projects, you can find me contributing to open source. I focus on fixing responsive design edge-cases, specifically in navigation bars.
+                            <br/><br/>When I'm not pushing new features to my projects / k8s clusters, you can find me contributing to open source. I focus on fixing responsive design edge-cases within the cryptocurrency community.
 
 
                             {/* It's odd that in the continuous rise of anxiety and depression, there has been little to no intervention in the */}
@@ -226,7 +233,7 @@ function HomePage ({ projectsRef, contactClick }) {
                                 <div>Stock Shapes</div>
                                 </div>
                             </div>
-                                <div className="font-semibold">React | Node.js | Vercel | EC2</div>
+                                <div className="font-semibold">React | Node.js | AWS EC2</div>
                                 {/* <div className="">Real-time stock & future updates with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
                                 {/* <div className="">Real-time stock prices with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
                                 <div className="">Portable & snappy stock prices. Aid your trading sessions by resizing the browser / stock quotes to your liking.
@@ -242,7 +249,8 @@ function HomePage ({ projectsRef, contactClick }) {
                                     {"pt-8"}
                                 >
                                     {/*[vers3] Building Stock Shapes gave me experience on how to navigate sparsely written API documentation with broken endpoints. It also shed light on why free stock tracking apps don't provide consistently fast price updates-- It's expensive. */}
-                                    Building Stock Shapes made me realize that fast & snappy prices are best fitted for private-use. Making the data public calls for hacky workarounds, and integrating additional data (i.e. futures like NASDAQ & S&P500... think 100s of updates per second) requires thousands of $ in licensing fees. <br/>To provide 100% uptime, I had to mitigate 429 errors by writing pm2 scripts on EC2 as iexCloud's SSE connections close only when the node.js app terminates.
+                                    Building Stock Shapes made me realize that fast & snappy prices are best fitted for private-use. Making the data public calls for hacky workarounds, and integrating additional data (i.e. futures like NASDAQ & S&P500... think 100s of updates per second) requires steep licensing fees. 
+                                    {/* <br/>To provide 100% uptime, I had to mitigate 429 errors by writing pm2 scripts on EC2 as iexCloud's SSE connections close only when the node.js app terminates. */}
                                     {/*[vers1] Pulls data from IEX Cloud API, uses server-sent-events (SSE) to feed live price updates to clients. Serverside deployed to EC2 as a way to accomodate live events that serverless computing cannot support out the box. $50 a month for my API costs, one session from market open to close tends to run around $1-8 per user that displays 5 stocks. Currently working on optimizing API calls to minimize costs. */}
                                 </div>
                             </div>
@@ -407,7 +415,7 @@ function HomePage ({ projectsRef, contactClick }) {
                                 <img width="64" src={vercel} alt="Vercel Logo" />
                             </div> */}
                             <div>
-                                <p>Amazon EC2</p>
+                                <p>AWS EC2</p>
                                 <img width="64" src={ec2} alt="Amazon EC2 Logo" />
                             </div>
                             <div>
