@@ -344,7 +344,8 @@ function HomePage ({ projectsRef, contactClick }) {
                             // {boolState ? "bg-slate-200 hover:cursor-pointer" : "hidden"}
                             {'pt-8'}
                             >
-                                Some effort has been spent towards accommodating non-registered users since local storage needs to interact with the database. Overall, a simple project with attention to providing a smooth experience, no matter when or where users decide to visit. This project has taught me how to tackle scalability when it comes to data processing and state management.
+                                {/* Some effort has been spent towards accommodating non-registered users since local storage needs to interact with the database. Overall, a simple project with attention to providing a smooth experience, no matter when or where users decide to visit. This project has taught me how to tackle scalability when it comes to data processing and state management. */}
+                                A simple project with attention to providing a smooth experience, no matter when or where users decide to visit. This project has taught me how to tackle scalability when it comes to data processing and state management.
 
                                 {/* sacrificing privacy */}
                                 {/* it would be more sustainable to sacrifice some privacy for user logins
