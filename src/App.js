@@ -2,11 +2,21 @@ import { useEffect, useState, useRef } from 'react';
 import './App.css';
 import HomePage from './components/HomePage';
 import TopNav from './components/TopNav';
+import { Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Projects from './components/subpages/Projects';
+import OpenSource from './components/subpages/OpenSource';
+import Skills from './components/subpages/Skills';
+import Aboutme from './components/subpages/Aboutme';
+import BottomHeader from './components/BottomHeader';
+import Directories from './components/Directories';
 
 function App() {
 
   const [detectScrollPosition, setDetectScrollPosition] = useState(0)
   const [contactClick, setContactClick] = useState(false)
+
+
 
 
   useEffect(() => {
@@ -60,11 +70,25 @@ function App() {
         contactClick={contactClick}
         />
       {/* <div className='fixed top-[50%] z-50 text-lg text-green-400'>penis{detectScrollPosition}</div> */}
-      <HomePage
+      {/* <HomePage
         projectsRef={projectsRef}
         scrollToTop={scrollToTop}
         contactClick={contactClick}
-      />
+      /> */}
+
+      <Routes>
+      <Route path='/' element={<HomePage 
+        projectsRef={projectsRef}
+        scrollToTop={scrollToTop}
+        contactClick={contactClick}/>} />
+        <Route path='/projects' element={<Projects/>} />
+        <Route path='/opensource' element={<OpenSource/>} />
+        <Route path='/skills' element={<Skills/>} />
+        <Route path='/aboutme' element={<Aboutme/>} />
+      </Routes>
+
+      <Directories scrollToTop={scrollToTop} />
+      <BottomHeader />
 
     </>
   );
