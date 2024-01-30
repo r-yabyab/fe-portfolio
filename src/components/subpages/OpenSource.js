@@ -17,6 +17,10 @@ function OpenSource () {
                     While most projects have solid teams updating their blockchains,
                     I found that some of these projects' websites haven't kept up with newer projects. By fixing up their websites, whether it be adding new buttons or tweaking navigation bars, the project can reflect their efforts to newcomers landing on these websites.</div>
 
+                    {/* During my tenure as an engaged participant in the cryptocurrency landscape, I have had the privilege of contributing to various communities dedicated to advancing the frontiers of finance. Despite the robust development teams maintaining blockchain infrastructures, I observed that certain project websites lag behind newer standards. Enhancing these websites, through additions such as new buttons or refined navigation bars, enables projects to showcase their commitment to excellence for newcomers exploring their online presence. */}
+
+                    {/* During my extensive involvement in the cryptocurrency space, I have had the privilege of participating in diverse communities dedicated to advancing the frontiers of finance. Notably, I observed that certain projects, despite having robust blockchain development teams, lag behind in maintaining their websites compared to newer initiatives. Enhancing these websites by incorporating features like new buttons and optimizing navigation bars can effectively showcase the project's commitment to excellence for visitors and potential stakeholders. */}
+
                     <div className="
                     max-md:flex  max-md:flex-col max-md:text-center max-md:gap-y-8 max-md:justify-center pt-8
                     md:
