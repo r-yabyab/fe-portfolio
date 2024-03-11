@@ -18,6 +18,7 @@ import rainbowLogo from '../../photos/r1-logo192.png'
 import stockshapesLogo from '../../photos/ss-logo512.png'
 import nt8Logo from '../../photos/nt-logo.webp'
 import tradingBot from '../../photos/algo-trader.png'
+import colors from '../../photos/colors.png'
 
 function Projects () {
     const [gifToggle, setGifToggle] = useState(false)
@@ -50,7 +51,7 @@ return(
 <div className="
     lg:flex lg:flex-col-reverse lg:space-x-[0px] lg:justify-center lg:items-center lg:[&>div]:gap-24
     max-w-[1400px] lg:gap-20 pt-8
-    max-lg:[&>div]:flex-col max-lg:space-y-[100px] max-lg:text-center 
+    max-lg:[&>div]:flex-col max-lg:flex-col-reverse max-lg:flex max-lg:space-y-[100px] max-lg:text-center 
     [&>div>div]:m-auto  min-w-[100%] align-middle
     pb-10
     ">
