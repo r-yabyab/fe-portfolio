@@ -17,6 +17,7 @@ import rainbowLogo from '../../photos/r1-logo192.png'
 // import rainbowEye from '../photos/logo512.png'
 import stockshapesLogo from '../../photos/ss-logo512.png'
 import nt8Logo from '../../photos/nt-logo.webp'
+import tradingBot from '../../photos/algo-trader.png'
 
 function Projects () {
     const [gifToggle, setGifToggle] = useState(false)
@@ -27,8 +28,8 @@ return(
     {/* <div ref={projectsRef} className="relative bg-neutral-200 bg-contain pt-10 mt-20"> */}
     <div className="relative  bg-contain pt-10 mt-20">
 
-<div className="text-center flex flex-col justify-center items-center gap-4 text-2xl  pt-10 pb-8 font-bold">
-    <div>Projects
+<div className="text-center flex flex-col justify-center items-center gap-4 pt-10 pb-8 ">
+    <div className="text-2xl font-bold ">Projects
 
                                {/* <span
         onClick={e => setGifToggle(!gifToggle)}
@@ -36,7 +37,7 @@ return(
         {gifToggle ? '[Gifs on]' : '[Gifs off]'}
     </span> */}
     </div>
-
+{/* <div>My websites are hosted on my k8s cluster on AWS EC2 instances. Although my hosting solution with k8s may be overkill, I find it interesting</div> */}
 
     {/* <div
         onClick={e => setGifToggle(!gifToggle)}
@@ -241,9 +242,9 @@ return(
             {/* vvv This doesn't work for some reason, it turns all the elements above as opacity-20 */}
             {/* <div className={`${imgHover ? "opacity-20" :null } h-[400px] flex flex-col gap-8 items-center justify-center bg-white`}> */}
             <div className={gifToggle ? 'h-[400px] flex flex-col gap-8 items-center justify-center bg-white' : 'hidden'}>
-                <img className="  object-cover aspect-square" src={nt8screenshot} alt="stockshapes gif 1" />
+                <img className="  object-cover aspect-square" src={tradingBot} alt="stockshapes gif 1" />
             </div>
-            <img className={gifToggle ? 'hidden' : "aspect-square h-[400px] object-cover"} src={nt8screenshot} alt="Rainbow Darkness.png" />
+            <img className={gifToggle ? 'hidden' : "aspect-square h-[400px] object-cover"} src={tradingBot} alt="Rainbow Darkness.png" />
 
             {/* </a> */}
             <div className="
@@ -259,15 +260,15 @@ return(
         <a target="_blank" rel="noreferrer" href="https://github.com/r-yabyab/Custom-NinjaScript-Files">
             <div className="flex gap-x-3 justify-center w-full bg-blue-200 p-2 rounded-md m-auto  align-middle items-center">
             <img src={nt8Logo} width="40" alt="Rainbow Darkness Logo" />
-            <div>Futures Algo Trader</div>
+            <div>Futures Trading Bot</div>
             </div>
             </a>
         </div>
-            <div className="font-semibold">C# | NinjaScript</div>
+            <div className="font-semibold">C#</div>
             {/* <div className="">Real-time stock & future updates with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
             {/* <div className="">Real-time stock prices with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
             <div className="">
-            Automated trading strategies for the futures market on NinjaTrader8 for live & paper accounts. 
+            Trading strategies for the futures market on NinjaTrader8. Strategies will trade sudden spikes of selling volume on uptrends.
             </div>
             {/* <div className={boolState ? "text-yellow-400 select-none hover:text-slate-800 hover:cursor-pointer" :
                 "text-slate-400 select-none hover:text-slate-800 hover:cursor-pointer"}
@@ -280,7 +281,7 @@ return(
                 {"pt-8"}
             >
                 {/*[vers3] Building Stock Shapes gave me experience on how to navigate sparsely written API documentation with broken endpoints. It also shed light on why free stock tracking apps don't provide consistently fast price updates-- It's expensive. */}
-                The goal of these NinjaTrader strategies (trading algos) is to perform under tight risk management found in prop firm accounts. Utilizes NinjaScript libraries to trade based off of historical price movements and order volume.
+                Made specifically for prop firm evaluations where you need to navigate through tight risks. Profitable on ES and CL futs. So far it has passed 2 25k evaluation accounts from Apex Trader Funding.
                 {/* <br/>To provide 100% uptime, I had to mitigate 429 errors by writing pm2 scripts on EC2 as iexCloud's SSE connections close only when the node.js app terminates. */}
                 {/*[vers1] Pulls data from IEX Cloud API, uses server-sent-events (SSE) to feed live price updates to clients. Serverside deployed to EC2 as a way to accomodate live events that serverless computing cannot support out the box. $50 a month for my API costs, one session from market open to close tends to run around $1-8 per user that displays 5 stocks. Currently working on optimizing API calls to minimize costs. */}
             </div>

@@ -9,6 +9,7 @@ import docker from '../../photos/docker.png'
 import kubies from '../../photos/Kubernetes_logo_without_workmark.svg.png'
 import nginx from '../../photos/nginx-svg.svg'
 import postgres from '../../photos/postgresql_logo.svg'
+import cka from '../../photos/logo_cka_whitetext-300x293.png'
 
 function Skills () {
 
@@ -20,14 +21,14 @@ function Skills () {
             // onMouseOver={e => setMouseClass(true)}
             // onMouseLeave={e => setMouseClass(false)}
             >
-                <div className="text-center pb-16 font-bold text-xl">Skills</div>
+                <div className="text-center pb-16 font-bold text-2xl">Skills</div>
                 <div className=
                     {
                         // mouseClass ? 
                         `flex justify-evenly flex-row max-lg:flex-wrap max-w-[1400px] m-auto
                         max-lg:[&>div]:basis-[20%] max-lg:gap-y-20
                             max-md:[&>div]:basis-[33%] 
-                        lg:gap-y-20 lg:flex-wrap lg:[&>div]:basis-[17%]
+                        lg:gap-y-20 lg:flex-wrap lg:[&>div]:basis-[15%]
                         [&>div>p]:text-center [&>div>p]:pb-4 
                         [&>div>img]:m-auto select-none
                         `
@@ -99,6 +100,21 @@ function Skills () {
                 </div>
             </div>
             
+            
+            <div className="text-center m-auto max-w-[1400px]">
+                <div className="font-bold text-2xl pb-8 pt-12">Certifications</div>
+                <div className="flex lg:justify-left lg:pl-20 max-lg:justify-center items-center gap-6">
+                    <img width="120" src={cka} alt="Kubernetes Logo" />
+                    <div className="flex-col text-left">
+                        <div className=" font-bold">Certified Kubernetes Adminitrator (CKA)</div>
+                        <div>Cloud Native Computing Foundation (CNCF)</div>
+                        <div className="text-sm text-gray-400">Issued Feb 2024 · Expires Feb 2027</div>
+                        <div className="text-sm text-gray-400">Credential ID LF-minv801zt7Credential ID LF-minv801zt7</div>
+                    </div>
+                </div>
+
+            </div>
+
             {/* <div>
                 <div>Web Technologies</div>
                 <div className="flex gap-8">
