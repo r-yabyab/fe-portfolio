@@ -22,6 +22,7 @@ import colors from '../../photos/colors.png'
 
 function Projects () {
     const [gifToggle, setGifToggle] = useState(false)
+    const [gifToggle1, setGifToggle1] = useState(false)
 return(
     <>
     <div>Projects test</div>
@@ -59,6 +60,120 @@ return(
     
 
     
+       {/* Color combo */}
+<div className="relative text-left [&>div]:max-w-[400px] max-lg:[&>div]:w-[400px]
+        flex
+        ">
+        <div
+            // onMouseOver={imgMouseOver}
+            // onMouseLeave={imgMouseLeave}
+            className="relative w-[80%] max-w-[500px] text-xl font-bold
+                  hover:cursor-pointer  select-none
+                  group
+                ">
+
+            {/* <div className="absolute  
+                opacity-0 group-hover:opacity-100
+                group-hover:bg-slate-200 group-hover:bg-opacity-60  hover:bg-opacity-90  h-full w-full  left-0">
+                <a target="_blank" rel="noreferrer" href="https://stockshapes-client.vercel.app/">
+                    <div className="hover:bg-black hover:text-white w-full h-full  ">
+                        <div className="absolute  gap-2 flex flex-col items-center text-center 
+                            right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
+                            <div>Live Site</div>
+                        <div><img className="w-[40px]" src={stockshapesLogo} alt="stockshapes logo" />
+                        </div>
+                    </div>
+                    </div>
+                </a>
+            </div> */}
+            <div 
+                            onMouseEnter={() => setGifToggle1(true)}
+                            onMouseLeave={() =>setGifToggle1(false)} 
+                className="absolute 
+                opacity-0 group-hover:opacity-100
+                group-hover:bg-slate-200 group-hover:bg-opacity-60 h-full w-full right-0">
+                {/* <div className="absolute w-full h-[50%] hover:bg-black hover:text-white top-0">
+                    <div className="absolute gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
+                        <div>
+                            Client-side
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div> */}
+                <a target="_blank" rel="noreferrer" href="https://github.com/r-yabyab/gimp-scripts">
+                <div className="absolute h-full w-full hover:bg-zinc-800 hover:bg-opacity-10 hover:text-white bottom-0">
+                    <div className="absolute  gap-2 flex flex-col items-center text-center right-[50%] translate-x-1/2 bottom-[50%] translate-y-1/2">
+                        <div>
+                            {/* Server-side */}
+                            Github
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+            </div>
+            {/* <a target="_blank" rel="noreferrer" href="https://stockshapes-client.vercel.app/"> */}
+            {/* <img className=" aspect-square object-cover" src={CloudStock} alt="Rainbow Darkness.png" /></a> */}
+            {/* <img className=" aspect-square object-cover" src={stockshapes} alt="Rainbow Darkness.png" /></a> */}
+            { }
+            {/* vvv This doesn't work for some reason, it turns all the elements above as opacity-20 */}
+            {/* <div className={`${imgHover ? "opacity-20" :null } h-[400px] flex flex-col gap-8 items-center justify-center bg-white`}> */}
+            {/* <div className={gifToggle1 ? 'h-[400px] flex flex-col gap-8 items-center justify-center bg-white' : 'hidden'}>
+                <img className="  object-cover aspect-square" src={colors} alt="stockshapes gif 1" />
+            </div> */}
+            <img className={gifToggle1 ? 'hidden' : "aspect-square h-[400px] object-cover"} src={colors} alt="Colors.png" />
+            <img className={!gifToggle1 ? 'hidden' : "aspect-square h-[400px] object-cover "} src={colors} alt="Colors.png" />
+
+            {/* </a> */}
+
+        </div>
+
+
+        <div className="">
+        <div className=" max-lg:pt-8 text-xl font-bold text-center mb-4  ">
+        <a target="_blank" rel="noreferrer" href="https://github.com/r-yabyab/Custom-NinjaScript-Files">
+            <div className="flex gap-x-3 justify-center w-full bg-blue-200 p-2 rounded-md m-auto  align-middle items-center">
+            <img src={nt8Logo} width="40" alt="Rainbow Darkness Logo" />
+            <div>Image Duplication and Recolor</div>
+            </div>
+            </a>
+        </div>
+            <div className="font-semibold">Scheme</div>
+            {/* <div className="">Real-time stock & future updates with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
+            {/* <div className="">Real-time stock prices with draggable + resizeable components. Resize the webpage to aid your trading sessions!</div> */}
+            <div className="">
+            Scripts for Gimp (photo editor) that generates color combinations for a PNG image. It loads image files, applies color changes (hue, saturation, brightness), repositions layers, and repeats.
+            </div>
+            {/* <div className={boolState ? "text-yellow-400 select-none hover:text-slate-800 hover:cursor-pointer" :
+                "text-slate-400 select-none hover:text-slate-800 hover:cursor-pointer"}
+                onClick={boolHandler}
+            >Details</div> */}
+            <div
+                // onClick={boolHandler} 
+                className=
+                // {boolState ? "bg-slate-200 hover:cursor-pointer" : "hidden"}
+                {"pt-8"}
+            >
+                {/*[vers3] Building Stock Shapes gave me experience on how to navigate sparsely written API documentation with broken endpoints. It also shed light on why free stock tracking apps don't provide consistently fast price updates-- It's expensive. */}
+                These scripts help me choose unique color palettes prior to painting the image in oil. I'm aware that AI provides similar functionality and more, but I need consistency regarding form.               
+                {/* <br/>To provide 100% uptime, I had to mitigate 429 errors by writing pm2 scripts on EC2 as iexCloud's SSE connections close only when the node.js app terminates. */}
+                {/*[vers1] Pulls data from IEX Cloud API, uses server-sent-events (SSE) to feed live price updates to clients. Serverside deployed to EC2 as a way to accomodate live events that serverless computing cannot support out the box. $50 a month for my API costs, one session from market open to close tends to run around $1-8 per user that displays 5 stocks. Currently working on optimizing API calls to minimize costs. */}
+            </div>
+        </div>
+    </div>
+   
+   
+   
+   
     {/* Stock Shapes */}
     <div className="relative text-left [&>div]:max-w-[400px] max-lg:[&>div]:w-[400px]
         flex
@@ -388,7 +503,7 @@ return(
         </div>
     </div>
 
-    
+
 
 
 
