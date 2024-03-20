@@ -157,8 +157,12 @@ function HomePage ({ projectsRef, contactClick }) {
                             {/* Web development equipments me with the tools to extend my knowledge 
                             Having a background in psychology equips me with the tools to make websites more human
                             people's lives that extends beyond private research.   */}
-My name is Roderick Cayabyab, I graduated with a Bachelor's in psychology from CSU East Bay where I learned about human cognition and motivation. I built on this knowledge by creating my own web apps in React and NodeJS that focus on user experience and practicality. In addition, I run trading bots against the U.S. futures market-- it's interesting seeing how prices react to buyer/seller mentality.
-<br /><br />Currently, I actively contribute to open-source cryptocurrencies, where I occasionally update their website’s mobile compatibility through Javascript, HTML, and CSS. While my primary focus is frontend development, I enjoy learning about devops technologies to gain a better understanding of how applications are provisioned and maintained efficiently.
+{/* My name is Roderick Cayabyab, I graduated with a Bachelor's in psychology from CSU East Bay where I learned about human cognition and motivation. I built on this knowledge by creating my own web apps in React and NodeJS that focus on user experience and practicality. In addition, I run trading bots against the U.S. futures market-- it's interesting seeing how prices react to buyer/seller mentality.
+<br /><br />Currently, I actively contribute to open-source cryptocurrencies, where I occasionally update their website’s mobile compatibility through Javascript, HTML, and CSS. While my primary focus is frontend development, I enjoy learning about devops technologies to gain a better understanding of how applications are provisioned and maintained efficiently. */}
+
+Hello, my name is Roderick Cayabyab, I'm a self taught developer and open-source cryptocurrency contributor from California. I focus primarily on frontend development and user experience, however, I also enjoy improving developer experiences by finding cheap and scalable server hosting solutions and creating CI/CD pipelines. 
+<br/><br/> I graduated with a psychology degree from CSU East Bay, and I've always been interested in creating practical applications for everyday life. Recently, I have been maintaining my futures trading bot, which is nice to learn about market psychology + turn a nice profit. Check out my projects to see what I have been working on.
+
 
                             {/* the pain of having to register everytime to use websites, I find enjoyment in creating simple front-end applications with minimal overhead for users. */}
                             {/* <br /><br />Please see my projects! */}
